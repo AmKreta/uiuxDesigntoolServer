@@ -1,0 +1,64 @@
+﻿Get Current User Id From Server
+
+CHAT:-
+
+
+    • GET 
+        ◦ http://localhost:8000/chat?userId=123	 
+
+    • POST  
+        ◦ http://localhost:8000/chat?userId=123&message='abcd'	  
+
+    • PUT  
+        ◦ http://localhost:8000/chat?messageId=123&editedMessage='abcd'	 	
+        ◦ (check if the message is sent by current user)
+
+    • Delete  
+        ◦ http://localhost:8000/chat?mesageId=123	
+        ◦ (check if it's sent by current user)
+
+        
+LOGIN:-
+    • POST:-
+        ◦ http://localhost:8000/login?id=123&pass=123	
+          	
+USER:-
+    • POST:-
+        ◦ http:localhost:8000/user		
+        ◦ (rest information are passed within request body)
+          
+    • get:-
+        ◦ http:localhost:8000/user?userId=123		
+        ◦ (check if it is current user or some other user)
+          
+    • put:-
+        ◦ http:localhost:8000/user?userId=123
+        ◦ (check if is is current user)
+          	
+    • Delete:-
+        ◦ http:localhost:8000/?userId=123
+        ◦ (check if it is current user)	
+
+
+SIGNUP:-
+    • GET:-
+        ◦ http://localhost:8000/signup	
+        ◦ (send userName and password in encrypted format in req body)
+
+
+PROJECTS:-
+    • GET:-
+        ◦ http:localhost:8000/projects?projectId=123	
+          
+    • POST:-
+        ◦ http:localhost:8000/projects/
+        ◦ send project info in json format or buffer in req  body
+        ◦ also send email containing pdf of design to all team-mates
+        ◦ 
+    • PUT:-
+        ◦ http:localhost:8000/projects?projectId=123	
+        ◦ check if the user who is editing is admin
+          
+    • DELETE:-
+        ◦ http:localhost:8000/projects
+        ◦ check if the user is in team list
